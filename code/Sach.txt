@@ -1,0 +1,7 @@
+A001,Dac Nhan Tam,Dale Carnegie,300000,NXB TRE,0,2018,200,01-08-2023
+C010,Cau truc du lieu,N.Viet Hung,80000,Dhsp tpHCM,0,2020,200,01-08-2023
+A002,Nha gia kim,Robertson,200000,Tp Ho Chi Minh,0,2020,200,01-08-2023
+B003,Tieng Anh 2,Johan Cavell,200000,Dai hoc Hue,0,2019,150,01-08-2023
+B004,Vu tru,Carl Sagan,250000,The gioi,0,2015,50,01-08-2023
+C005,Harry Potter,J.k.Rowling,1000000,NXB TRE,0,2022,200,01-08-2023
+T007,Thuyet Gaia,James Lovelock,105000,NXB TRE,0,2022,50,01-08-2023
