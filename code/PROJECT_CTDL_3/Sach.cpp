@@ -75,7 +75,7 @@ void Sach<DataType>::cap_nhat_sach(Sach<DataType> arr[1000], int& n, bool f)
 		}
 		else {
 			n--;
-			cout << setw(20) << "Ma sach bi trung, khong them sach vao dc ." << endl;
+			cout << setw(20) << "Ma sach bi trung, khong the them sach vao" << endl;
 		}
 	}
 	else {
