@@ -167,14 +167,14 @@ menu:
             list_s[n_s] = s_input;
             n_s++;
 
-            s_input.cap_nhat_sach(list_s, n_s, true);
+            s_input.cap_nhat_sach(list_s, n_s, true, false);
             _getch();
             goto lb_sach;
         }
         else if (tab_sach == 3) {
             //Xoa sach
             s.xoaSach(list_s, n_s);
-            s_input.cap_nhat_sach(list_s, n_s, false);
+            s_input.cap_nhat_sach(list_s, n_s, false, false);
             _getch();
             goto lb_sach;
         }
@@ -227,12 +227,12 @@ menu:
             cin >> id_sach;
             err = s.timSach(list_s, n_s, id_sach);
             if (err == 0) {
-                cout << endl << setw(20) << "Khong tim thay sach muon muon.";
-                system("pause");
+                cout << endl << setw(20) << "Khong tim thay sach muon muon."<<endl;
+                _getch();
             }
             else if (err == 1) {
-                cout << endl << setw(20) << "Sach da duoc muon.";
-                system("pause");
+                cout << endl << setw(20) << "Sach da duoc muon."<<endl;
+                _getch();
             }
             else {
                 bool flag;
@@ -241,13 +241,13 @@ menu:
                     l.muonSach(list_pm, n_pm, id_bd, id_sach);
                     l.capNhatPhieuMuon(list_pm, n_pm);
                     s.tinhTrangSach(list_s, n_s, id_sach, "1");
-                    s.cap_nhat_sach(list_s, n_s, true);
-                    cout << endl << setw(20) << "Muon sach thanh cong.";
-                    system("pause");
+                    s.cap_nhat_sach(list_s, n_s, true, true);
+                    cout << endl << setw(20) << "Muon sach thanh cong."<<endl;
+                    _getch();
                 }
                 else {
-                    cout << endl << setw(20) << "Khong tim thay ma ban doc.";
-                    system("pause");
+                    cout << endl << setw(20) << "Khong tim thay ma ban doc."<<endl;
+                    _getch();
                 }
             }
             cout << endl;
@@ -265,17 +265,17 @@ menu:
             err = l.traSach(list_pm, n_pm, sp);
             if (err == "0") {
                 cout << endl << setw(20) << "Khong tim thay phieu muon.";
-                system("pause");
+                _getch();
             }
             else if (err == "1") {
-                cout << endl << setw(20) << "Phieu muon da d tra.";
-                system("pause");
+                cout << endl << setw(20) << "Phieu muon da duoc tra.";
+                _getch();
             }
             else {
                 cout << endl << setw(20) << "Tra sach thanh cong";
                 s.tinhTrangSach(list_s, n_s, err, "0");
-                s.cap_nhat_sach(list_s, n_s, false);
-                system("pause");
+                s.cap_nhat_sach(list_s, n_s, false, false);
+                _getch();
 
             }
             l.capNhatPhieuMuon(list_pm, n_pm);

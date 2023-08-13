@@ -57,7 +57,7 @@ void Sach<DataType>::themSach(Sach<DataType>& s)
 }
 
 template<class DataType>
-void Sach<DataType>::cap_nhat_sach(Sach<DataType> arr[1000], int& n, bool f)
+void Sach<DataType>::cap_nhat_sach(Sach<DataType> arr[1000], int& n, bool f, bool check)
 {
 	bool flag = true;
 	ofstream file_s("../Sach.txt");
@@ -69,13 +69,24 @@ void Sach<DataType>::cap_nhat_sach(Sach<DataType> arr[1000], int& n, bool f)
 			flag = false;
 	}
 	if (f == true) {
-		if (flag) {
-			file_s << arr[n - 1].masach << "," << arr[n - 1].tensach << "," << arr[n - 1].tacgia << "," << arr[n - 1].giaban << "," << arr[n - 1].nhaxuatban << "," << arr[n - 1].tinhtrangsach << "," << arr[n - 1].namphathanh << "," << arr[n - 1].sotrang << "," << arr[n - 1].ngaynhapkho << endl;
-			cout << setw(20) << "Them sach thanh cong.";
+		if (flag == true && check == true) {
+			if (flag) {
+				file_s << arr[n - 1].masach << "," << arr[n - 1].tensach << "," << arr[n - 1].tacgia << "," << arr[n - 1].giaban << "," << arr[n - 1].nhaxuatban << "," << arr[n - 1].tinhtrangsach << "," << arr[n - 1].namphathanh << "," << arr[n - 1].sotrang << "," << arr[n - 1].ngaynhapkho << endl;
+			}
+			else {
+				n--;
+				cout << setw(20) << "Ma sach bi trung, khong the them sach vao" << endl;
+			}
 		}
 		else {
-			n--;
-			cout << setw(20) << "Ma sach bi trung, khong the them sach vao" << endl;
+			if (flag) {
+				file_s << arr[n - 1].masach << "," << arr[n - 1].tensach << "," << arr[n - 1].tacgia << "," << arr[n - 1].giaban << "," << arr[n - 1].nhaxuatban << "," << arr[n - 1].tinhtrangsach << "," << arr[n - 1].namphathanh << "," << arr[n - 1].sotrang << "," << arr[n - 1].ngaynhapkho << endl;
+				cout << setw(20) << "Them sach thanh cong.";
+			}
+			else {
+				n--;
+				cout << setw(20) << "Ma sach bi trung, khong the them sach vao" << endl;
+			}
 		}
 	}
 	else {

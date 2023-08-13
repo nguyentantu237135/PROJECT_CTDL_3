@@ -40,7 +40,7 @@ void PhieuMuon<DataType>::muonSach(PhieuMuon<DataType> arr[1000], int& sl, DataT
     arr[sl].maSach = masach;
     arr[sl].ngayMuon = ngay + "/" + thang + "/" + nam;
     arr[sl].ngayTra = ngaytra + "/" + thang + "/" + nam;
-    arr[sl].tinhTrang = "1-";
+    arr[sl].tinhTrang = "1";
     sl++;
 }
 
@@ -49,7 +49,7 @@ string PhieuMuon<DataType>::traSach(PhieuMuon arr[1000], int sl, DataType sp)
 {
     for (int index = 0; index < sl; index++) {
         if (arr[index].soPhieuMuon == sp) {
-            if (arr[index].tinhTrang == "1-") {
+            if (arr[index].tinhTrang == "1") {
                 arr[index].tinhTrang = "0";
                 //tra sach thanh cong
                 return arr[index].maSach;

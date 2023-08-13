@@ -16,7 +16,7 @@ public:
 	~Sach();
 
 	void themSach(Sach& s);
-	void cap_nhat_sach(Sach arr[1000], int& n, bool f);
+	void cap_nhat_sach(Sach arr[1000], int& n, bool f, bool check);
 	void xoaSach(Sach arr[1000], int& n);
 	int timSach(Sach arr[1000], int sl, DataType id);
 
